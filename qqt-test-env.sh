@@ -8,7 +8,7 @@
 #env effect
 mm set env cur 'qt.android'
 #do command in this env
-mm k qqt.build
+mm exec qqt.build
 #env reset (no need)
 
 
@@ -19,7 +19,7 @@ mm export
 source $(mm source root)/env_effect.sh
 #do command in this env
 java -version
-mm k qqt.build
+mm exec qqt.build
 #env reset (need)
 source $(mm source root)/env_unset.sh
 
@@ -28,7 +28,7 @@ source $(mm source root)/env_unset.sh
 #env effect
 mm set env cur 'android.mobile'
 #do command in this env
-mm k qqt.build
+mm exec qqt.build
 #env reset (no need)
 
 
@@ -36,5 +36,5 @@ mm k qqt.build
 #env effect
 mm set env cur 'qt.android'
 #do command in this env
-mm k 'java -version' 'pwd' 'ls -l'
+mm exec 'java -version' 'pwd' 'ls -l'
 #env reset (no need)

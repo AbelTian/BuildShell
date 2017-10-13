@@ -19,5 +19,5 @@ for /f "" %%a in ('mm source root') do call %%a\env_unset.bat
 ::env effect
 call mm set env cur qt.android
 ::do command in this env
-call mm "java -version"
+call mm exec "java -version"
 ::env reset (no need)

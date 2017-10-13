@@ -10,7 +10,7 @@
 ::env effect
 call mm set env cur "qt.android"
 ::do command in this env
-call mm k qqt.build
+call mm exec qqt.build
 ::env reset (no need)
 
 
@@ -18,7 +18,7 @@ call mm k qqt.build
 ::env effect
 call mm set env cur "android.x86"
 ::do command in this env
-call mm k qqt.build
+call mm exec qqt.build
 ::env reset (no need)
 
 
@@ -26,7 +26,7 @@ call mm k qqt.build
 ::env effect
 call mm set env cur android.mobile
 ::do command in this env
-call mm k qqt.build
+call mm exec qqt.build
 ::env reset (no need)
 
 
