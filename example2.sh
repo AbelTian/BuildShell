@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-mm set env cur 'qt'
+mm set cur env 'qt'
 #do command in this env
 mm exec build
 mm exec 'ls -l'

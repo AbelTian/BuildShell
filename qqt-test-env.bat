@@ -8,7 +8,7 @@
 
 
 ::env effect
-call mm set env cur "qt.android"
+call mm set cur env "qt.android"
 ::do command in this env
 call mm exec qqt.build
 ::env reset (no need)
@@ -16,7 +16,7 @@ call mm exec qqt.build
 
 
 ::env effect
-call mm set env cur "android.x86"
+call mm set cur env "android.x86"
 ::do command in this env
 call mm exec qqt.build
 ::env reset (no need)
@@ -24,7 +24,7 @@ call mm exec qqt.build
 
 
 ::env effect
-call mm set env cur android.mobile
+call mm set cur env android.mobile
 ::do command in this env
 call mm exec qqt.build
 ::env reset (no need)
@@ -43,7 +43,7 @@ exit /b 0
 
 :env_effect
 ::env effect
-call mm set env cur %1
+call mm set cur env %1
 call mm export
 for /f "" %%a in ('mm source root') do call %%a\env_effect.bat
 goto :eof
