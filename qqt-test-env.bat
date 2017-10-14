@@ -1,11 +1,4 @@
 @echo off
-::!bat cmd
-::create mm link
-::c:\windows\mm.bat
-::@echo off
-::call xxx\pymake.bat %*
-
-
 
 ::env effect
 call mm set cur env "qt.android"

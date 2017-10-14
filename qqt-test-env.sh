@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-# create mm link
-# sudo ln -s xxx/pymake6.sh /usr/local/bin/mm
-
 
 
 
