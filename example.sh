@@ -28,9 +28,8 @@ mm exec qqt.build
 env_effect 'android.x86' x86
 #do custom command in this env
 java -version
-env_unset x86
 #env reset (need)
-
+env_unset x86
 
 #env effect (shared environment)
 mm set cur env 'android.x86'

@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
 
-
 #env effect
-mm set cur env 'qt.android'
+mm set cur env 'macOS'
 #do command in this env
 mm exec qqt.build
 #env reset (no need)
@@ -11,16 +10,14 @@ mm exec qqt.build
 
 
 #env effect
-mm set cur env 'android.x86'
-mm export
-source $(mm source root)/env_effect.sh
+mm export qt4 qt4
+source $(mm source root)/qt4_effect.sh
 #do command in this env
-java -version
-mm exec qqt.build
 #env reset (need)
-source $(mm source root)/env_unset.sh
+source $(mm source root)/qt4_unset.sh
 
-
+mm set cur env qt4
+mm exec qqt.build
 
 #env effect
 mm set cur env 'android.mobile'
@@ -31,7 +28,12 @@ mm exec qqt.build
 
 
 #env effect
-mm set cur env 'qt.android'
+mm set cur env 'android.x86'
 #do command in this env
-mm exec 'java -version' 'pwd' 'ls -l'
+mm exec qqt.build
 #env reset (no need)
+
+mm set cur env iOSSimulator
+mm exec qqt.build
+
+mm set cur env macOS
