@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 
-ename=qqtdebug0
+ename=qqtrelease0
 
-build.qqt() {
+build.qqt.release() {
     src_path=/Users/abel/Develop/a0-develop/a0-qqtfoundation
     src=/Users/abel/Develop/a0-develop/a0-qqtfoundation/QQt.pro
-    build=/Users/abel/Develop/c0-buildstation/QQt/${QTVERSION}/${QSYS}/Debug
+    build=/Users/abel/Develop/c0-buildstation/QQt/${QTVERSION}/${QSYS}/Release
     mkdir -p $build
     cd $build
     echo build $(pwd)
     rm -rf src/bin examples/*/bin
     rm -rf ${src_path}/sdk
-    qmake $src ${QTSPEC} "CONFIG+=debug" "CONFIG+=qml_debug" ${QTCONFIG} && make qmake_all
+    qmake $src ${QTSPEC} "CONFIG+=release" ${QTCONFIG} && make qmake_all
     make -j4
 }
 
@@ -19,7 +19,7 @@ build.qqt() {
 mm export 'macOS' ${ename}
 source $(mm source root)/${ename}_effect.sh
 #do command in this env
-build.qqt
+build.qqt.release
 #env reset (need)
 source $(mm source root)/${ename}_unset.sh
 
@@ -28,7 +28,7 @@ source $(mm source root)/${ename}_unset.sh
 mm export 'qt4' ${ename}
 source $(mm source root)/${ename}_effect.sh
 #do command in this env
-build.qqt
+build.qqt.release
 #env reset (need)
 source $(mm source root)/${ename}_unset.sh
 
@@ -37,7 +37,7 @@ source $(mm source root)/${ename}_unset.sh
 mm export 'android.mobile' ${ename}
 source $(mm source root)/${ename}_effect.sh
 #do command in this env
-build.qqt
+build.qqt.release
 #env reset (need)
 source $(mm source root)/${ename}_unset.sh
 
@@ -46,7 +46,7 @@ source $(mm source root)/${ename}_unset.sh
 mm export 'android.x86' ${ename}
 source $(mm source root)/${ename}_effect.sh
 #do command in this env
-build.qqt
+build.qqt.release
 #env reset (need)
 source $(mm source root)/${ename}_unset.sh
 
@@ -55,7 +55,7 @@ source $(mm source root)/${ename}_unset.sh
 mm export iOS ${ename}
 source $(mm source root)/${ename}_effect.sh
 #do command in this env
-build.qqt
+build.qqt.release
 #env reset (need)
 source $(mm source root)/${ename}_unset.sh
 
@@ -64,6 +64,6 @@ source $(mm source root)/${ename}_unset.sh
 mm export 'iOSSimulator' ${ename}
 source $(mm source root)/${ename}_effect.sh
 #do command in this env
-build.qqt
+build.qqt.release
 #env reset (need)
 source $(mm source root)/${ename}_unset.sh
