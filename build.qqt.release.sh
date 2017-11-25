@@ -10,7 +10,7 @@ build.qqt.release() {
     cd $build
     echo build $(pwd)
     rm -rf src/bin examples/*/bin
-    rm -rf ${src_path}/sdk
+    rm -rf ${src_path}/../QQt/${QTVERSION}/${QSYS}/Release
     qmake $src ${QTSPEC} "CONFIG+=release" ${QTCONFIG} && make qmake_all
     make -j4
 }

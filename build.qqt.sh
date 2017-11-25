@@ -10,7 +10,7 @@ build.qqt() {
     cd $build
     echo build $(pwd)
     rm -rf src/bin examples/*/bin
-    rm -rf ${src_path}/sdk
+    rm -rf ${src_path}/../QQt/${QTVERSION}/${QSYS}/Debug
     qmake $src ${QTSPEC} "CONFIG+=debug" "CONFIG+=qml_debug" ${QTCONFIG} && make qmake_all
     make -j4
 }
