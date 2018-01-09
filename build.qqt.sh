@@ -3,8 +3,8 @@
 ename=qqtdebug0
 
 build.qqt() {
-    src_path=/Users/abel/Develop/a0-develop/a0-qqtfoundation
-    src=/Users/abel/Develop/a0-develop/a0-qqtfoundation/QQt.pro
+    src_path=/Users/abel/Develop/a0-develop/LibQQt
+    src=/Users/abel/Develop/a0-develop/LibQQt/QQt.pro
     build=/Users/abel/Develop/c0-buildstation/QQt/${QTVERSION}/${QSYS}/Debug
     mkdir -p $build
     cd $build

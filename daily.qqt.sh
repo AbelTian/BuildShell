@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 daily.qqt (){
-    src_path=/Users/abel/Develop/a0-develop/a0-qqtfoundation
+    src_path=/Users/abel/Develop/a0-develop/LibQQt
     src=${src_path}/QQt.pro
     build=/Users/abel/Develop/c0-buildstation/QQt/${QTVERSION}/${QSYS}/Debug
     mkdir -p $build
@@ -13,7 +13,7 @@ daily.qqt (){
 }
 
 daily.qqt.release(){
-    src_path=/Users/abel/Develop/a0-develop/a0-qqtfoundation
+    src_path=/Users/abel/Develop/a0-develop/LibQQt
     src=${src_path}/QQt.pro
     build=/Users/abel/Develop/c0-buildstation/QQt/${QTVERSION}/${QSYS}/Release
     mkdir -p $build
