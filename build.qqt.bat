@@ -36,8 +36,7 @@ exit /b 0
 
 :env_effect
 ::env effect
-call mm set cur env %1
-call mm export
+call mm export %1 to env
 for /f "" %%a in ('mm source root') do call %%a\env_effect.bat
 goto :eof
 
